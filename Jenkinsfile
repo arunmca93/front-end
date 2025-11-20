@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/arunmca93/front-end.git',
+                    url: 'https://github.com/arunmca93/front-end',
                     credentialsId: '160d2fd1-097c-4e95-9253-eff478d7426d'
             }
         }
