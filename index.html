@@ -8,11 +8,11 @@
   <link rel="icon" href="favicon.ico" />
   <style>
     :root {
-      --primary: #0ea5e9; /* sky blue */
-      --secondary: #0369a1; /* dark blue */
-      --text: #1e293b; /* slate gray */
-      --bg: #ffffff;
-      --light: #f1f5f9;
+      --primary: #e63946; /* red */
+      --secondary: #1d3557; /* deep navy */
+      --text: #2b2d42;
+      --bg: #f8f9fa;
+      --light: #edf2f4;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; }
     body { background: var(--bg); color: var(--text); }
@@ -22,9 +22,9 @@
     nav a:hover { color: var(--primary); }
 
     /* Hero Section */
-    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 1rem; background: linear-gradient(180deg, #e0f2fe, #ffffff); }
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 1rem; background: linear-gradient(180deg, #ffe5e8, #ffffff); }
     .hero h1 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 1rem; }
-    .hero p { font-size: 1.1rem; max-width: 650px; color: #475569; margin-bottom: 2rem; }
+    .hero p { font-size: 1.1rem; max-width: 650px; color: #555; margin-bottom: 2rem; }
     .btn { background: var(--primary); color: white; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
     .btn:hover { background: var(--secondary); }
 
@@ -32,23 +32,23 @@
     .section { padding: 4rem 2rem; text-align: center; }
     .section h2 { font-size: 2rem; color: var(--secondary); margin-bottom: 1.5rem; }
     .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
-    .card { background: var(--light); border-radius: 10px; padding: 1.5rem; transition: transform 0.2s ease; border: 1px solid #e2e8f0; }
+    .card { background: var(--light); border-radius: 10px; padding: 1.5rem; transition: transform 0.2s ease; border: 1px solid #dfe3e6; }
     .card:hover { transform: translateY(-5px); }
     .card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-    .card p { color: #475569; font-size: 0.95rem; }
+    .card p { color: #555; font-size: 0.95rem; }
 
     /* About */
-    .about { max-width: 900px; margin: 0 auto; color: #475569; line-height: 1.6; }
+    .about { max-width: 900px; margin: 0 auto; color: #555; line-height: 1.6; }
 
     /* Contact */
     .contact-form { display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; text-align: left; }
     .contact-form input, .contact-form textarea {
-      margin-bottom: 1rem; padding: 0.8rem; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 1rem;
+      margin-bottom: 1rem; padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;
     }
     .contact-form button { background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
     .contact-form button:hover { background: var(--secondary); }
 
-    footer { background: var(--light); padding: 1.5rem; text-align: center; font-size: 0.9rem; color: #475569; border-top: 1px solid #e2e8f0; }
+    footer { background: var(--light); padding: 1.5rem; text-align: center; font-size: 0.9rem; color: #555; border-top: 1px solid #dfe3e6; }
   </style>
 </head>
 <body>
@@ -100,16 +100,11 @@
 
   <section id="contact" class="section">
     <h2>Contact Us</h2>
-    
-    <!-- FINAL WORKING CONTACT FORM -->
     <form class="contact-form" action="https://formspree.io/f/xeongnlv" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-      <!-- Optional: better email subject -->
       <input type="hidden" name="_subject" value="New Contact Submission - NexGen Software">
-
       <button type="submit">Send Message</button>
     </form>
   </section>
