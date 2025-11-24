@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/arunmca93/front-end',
-                    credentialsId: '160d2fd1-097c-4e95-9253-eff478d7426d'
+                    credentialsId: 'aws-credentials'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
                     sh 'aws s3 sync build/ s3://$S3_BUCKET --delete'
-                    sh 'aws cloudfront create-invalidation --distribution-id E1RRAMY2MSU0VK --paths "/*"'
+                    sh 'aws cloudfront create-invalidation --distribution-id E198JPOVO7IPYY --paths "/*"'
                 }
             }
         }
