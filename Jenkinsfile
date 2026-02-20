@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        S3_BUCKET = 'arun-devops-1993'
+        S3_BUCKET = 'arun-duppu-123'
     }
 
     stages {
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
                     sh 'aws s3 sync build/ s3://$S3_BUCKET --delete'
-                    sh 'aws cloudfront create-invalidation --distribution-id E198JPOVO7IPYY --paths "/*"'
+                    sh 'aws cloudfront create-invalidation --distribution-id E2Z4P2US443N9O --paths "/*"'
                 }
             }
         }
